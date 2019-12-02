@@ -3,7 +3,7 @@ import graphlHTTP from "express-graphql";
 import mongoose from "mongoose";
 import schema from "./schema";
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/notetaking_db", {
+mongoose.connect("mongodb://127.0.0.1/notetaking_db", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

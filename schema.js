@@ -18,6 +18,8 @@ input NoteInput {
  }
 type Mutation {
   createNote(input: NoteInput) : Note
+  updateNote(_id: ID!, input: NoteInput): Note
+  deleteNote(_id: ID!) : Note
  }
 `;
 const schema = makeExecutableSchema({
