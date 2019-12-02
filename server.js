@@ -1,6 +1,7 @@
 import express from "express";
 import graphlHTTP from "express-graphql";
 import mongoose from "mongoose";
+import cors from 'cors';
 import schema from "./schema";
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://127.0.0.1/notetaking_db", {
@@ -9,6 +10,7 @@ mongoose.connect("mongodb://127.0.0.1/notetaking_db", {
 });
 const app = express();
 const PORT = 4300;
+app.use(cors());
 app.get("/", (req, res) => {
   res.json({
     message: "Notetaking API v1"
