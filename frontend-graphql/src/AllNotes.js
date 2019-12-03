@@ -35,9 +35,7 @@ const AllNotes = () => {
                     </div>
                   </div>
                   <footer className="card-footer">
-                    <Link to={`note/${note._id}`} className="card-footer-item">
-                      Edit
-                    </Link>
+                  <Link to={`note/${note._id}`} className="card-footer-item">Edit</Link>
                     <a href="#" className="card-footer-item">
                       Delete
                     </a>
