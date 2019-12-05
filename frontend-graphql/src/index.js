@@ -13,7 +13,7 @@ import App from "./App";
 const errorLink = onError(({ graphQLErrors }) => {
   if (graphQLErrors) graphQLErrors.map(({ message }) => notify.show(message, 'error'));
 });
-const httpLink = createHttpLink({ uri: 'http://localhost:4300/graphql' });
+const httpLink = createHttpLink({ uri: 'http://localhost:4000/graphql' });
 const link = ApolloLink.from([
   errorLink,
   httpLink,

@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import cors from 'cors';
 import schema from "./schema";
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://127.0.0.1/notetaking_db", {
+mongoose.connect("mongodb://localhost:27017/notetaking_db", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
